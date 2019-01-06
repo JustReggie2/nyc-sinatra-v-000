@@ -1,7 +1,7 @@
 <h1>Edit Figure</h1>
 
 <h2>Details</h2>
-<form action='/figures/<%=@figure.id%>' method='post'>
+<form action='/figures/<%= @figure.id %>' method='post'>
   <input id="hidden" type="hidden" name="_method" value="patch">
   <div>
     <label for='figure_name'>Name:</label>
