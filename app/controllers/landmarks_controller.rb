@@ -15,4 +15,10 @@ class LandmarksController < ApplicationController
 
     redirect "landmarks/#{@landmark.id}"
   end
+
+  get '/landmarks/:id' do
+    @landmark = Landmark.find_by(params[:id])
+
+    erb :'landmarks/show'
+  end
 end
