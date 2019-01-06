@@ -5,7 +5,7 @@
   <input id="hidden" type="hidden" name="_method" value="patch">
   <div>
     <label for='figure_name'>Name:</label>
-    <input type='text' id='figure_name' name='figure[name]' value='<%=@figure.name%>'>
+    <input type='text' id='figure_name' name='figure[name]' value='<%= @figure.name %>'>
   </div>
 
   <br>
@@ -13,7 +13,7 @@
   <% Title.all.each do |title| %>
     <input type='checkbox' name='figure[title_ids][]'
           <%= "checked" if @figure.titles.include?(title)%>
-          value='<%=title.id%>' id="title_<%=title.id%>"><%=title.name%></input>
+          value='<%= title.id %>' id="title_<%= title.id %>"><%= title.name %></input>
   <% end %>
 
   <br>
@@ -28,7 +28,7 @@
   <% Landmark.all.each do |landmark| %>
   <input type='checkbox' name='figure[landmark_ids][]'
         <%= "checked" if @figure.landmarks.include?(landmark) %>
-        value='<%=landmark.id%>' id="landmark_<%=landmark.id%>"><%=landmark.name%></input>
+        value='<%= landmark.id %>' id="landmark_<%= landmark.id %>"><%= landmark.name %></input>
   <% end %>
 
   <br>
